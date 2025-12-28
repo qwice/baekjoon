@@ -21,7 +21,6 @@ class Solution {
         int right = n;
         int count = 0;
 
-        // 최대 이동 횟수 제한
         while (count <= 3 * n) {
             if (sum1 == target) return count;
 
@@ -29,7 +28,6 @@ class Solution {
                 sum1 -= arr[left];
                 left++;
             } else {
-                // 🔴 여기서 범위 체크!
                 if (right == 2 * n) break;
                 sum1 += arr[right];
                 right++;
